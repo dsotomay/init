@@ -1,0 +1,2 @@
+By using the command -----less /etc/resolv.conf----- you are able to view the resolve
+configuration file containing both the server name and ip address
