@@ -1,0 +1,10 @@
+#!/bin/bash
+
+md5sum /etc/crontab > /etc/newnum
+if [ if -f /etc/oldnum ]
+then
+	if [ "$(diff /etc/newnum /etc/oldnum)" != "" ]
+	then echo "/etc/crontab was changed" | mail -s "Crontab was changed" root
+	fi
+fi
+cp /etc/newnum /etc/oldnum
